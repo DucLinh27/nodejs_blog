@@ -11,16 +11,16 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(express.urlencoded({ 
   extended: true
 }));
-app.use(express.json());
+                   app.use(express.json());
 //HTTP logger
-app.use(morgan('combined'));
+    app.use(morgan('combined'));
 //Template engine
-app.engine('handlebars', engine({
-  extname: '.handlebars'
+            app.engine('handlebars', engine({
+        extname: '.handlebars'
 }));
 app.set('view engine', 'handlebars');
-app.set('views',path.join(__dirname, 'resources/views'));
-// console.log('PATH:', path.join(__dirname, 'resources/views'));
+      app.set('views',path.join(__dirname, 'resources/views'));
+                  // console.log('PATH:', path.join(__dirname, 'resources/views'));
 
 
 
